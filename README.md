@@ -1,7 +1,16 @@
-# web-world-adventure
+# CSS Dungeon
 
+Minimal vanilla HTML, CSS, and JavaScript scaffold for a story-driven learning adventure.
 
-Minimal vanilla HTML, CSS, and JavaScript scaffold.
+## Today’s update (July 30, 2026)
+
+The project now has:
+
+- a restored shared header/footer layout across the main pages
+- working root-based asset paths so the local preview serves CSS and scripts correctly
+- a login page with a lightweight auth flow for sign-in, sign-up, and sign-out state
+- a small auth regression test to verify the basic account logic
+- a clear next step path toward real Supabase authentication and GitHub-backed deployment
 
 ## Starting point
 
@@ -60,9 +69,16 @@ Use this as your build log. Mark each session when done.
 
 ### V1 done checklist
 
-- [ ] Home, About, Profile, Login, and Quest Board structures are in place
-- [ ] Shared nav/footer works across page shells
+- [x] Home, About, Profile, Login, and Quest Board structures are in place
+- [x] Shared nav/footer works across page shells
 - [ ] Trial quest flow can trigger signup prompt
 - [ ] Profile can display progress stats from local data
-- [ ] Quest progression concept (Lvl 1 -> Lvl 2 -> Lvl 3 -> Boss) is represented in UI/data
-- [ ] Auth persistence and leaderboard are still deferred to Phase 2+
+- [x] Quest progression concept (Lvl 1 -> Lvl 2 -> Lvl 3 -> Boss) is represented in UI/data
+- [x] Auth persistence and leaderboard are deferred to Phase 2+
+
+## Next steps
+
+1. Replace the current browser-only auth prototype with Supabase Auth.
+2. Connect the login page to Supabase sign-in and sign-up flows.
+3. Add protected routes and user-specific progress storage.
+4. Keep the current UI structure intact while moving data access behind a simple API layer.
