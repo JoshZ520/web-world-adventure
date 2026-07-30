@@ -1,4 +1,5 @@
-# CSS Dungeon
+# web-world-adventure
+
 
 Minimal vanilla HTML, CSS, and JavaScript scaffold.
 
@@ -65,4 +66,3 @@ Use this as your build log. Mark each session when done.
 - [ ] Profile can display progress stats from local data
 - [ ] Quest progression concept (Lvl 1 -> Lvl 2 -> Lvl 3 -> Boss) is represented in UI/data
 - [ ] Auth persistence and leaderboard are still deferred to Phase 2+
-# web-world-adventure
