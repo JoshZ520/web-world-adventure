@@ -1,0 +1,189 @@
+/* Quest lesson page scaffolding */
+.quest-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.lesson-meta h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.quest-kicker {
+  margin: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.section-title {
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.lesson-workbench {
+  display: grid;
+  gap: 1rem;
+}
+
+.lesson-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.lesson-tab {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #f2f2f2;
+  color: #222;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lesson-tab.is-active,
+.lesson-tab[aria-selected="true"] {
+  background: #222;
+  color: #fff;
+}
+
+.lesson-panel[hidden] {
+  display: none;
+}
+
+.preview-block h2,
+.editor-block h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.editor-block {
+  position: relative;
+}
+
+#lesson-preview {
+  width: 100%;
+  min-height: 300px;
+  border: 0;
+  background: #fff;
+}
+
+.editor-block textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.95rem;
+  padding: 0.75rem;
+  border: 1px solid #c8c8c8;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+.css-assist {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(320px, calc(100% - 1rem));
+  max-height: 180px;
+  overflow: auto;
+  padding: 0.6rem;
+  border: 1px solid #94a3b8;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.18);
+  z-index: 8;
+}
+
+.css-assist-label {
+  margin: 0 0 0.45rem;
+  font-size: 0.85rem;
+  color: #334155;
+}
+
+.css-assist-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.css-assist-list button {
+  border: 1px solid #64748b;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #1f2937;
+  padding: 0.3rem 0.55rem;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.css-assist-list button:hover,
+.css-assist-list button:focus-visible {
+  background: #1f2937;
+  color: #fff;
+  outline: none;
+}
+
+.lesson-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.lesson-actions button {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+}
+
+.lesson-actions button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lesson-feedback {
+  margin: 0;
+  min-height: 1.5rem;
+  font-weight: 600;
+}
+
+.quest-complete-panel {
+  margin-top: 0.75rem;
+  border: 1px solid #9ca3af;
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: #f8fafc;
+}
+
+.quest-complete-panel h3 {
+  margin: 0 0 0.35rem;
+}
+
+.quest-complete-panel p {
+  margin: 0 0 0.55rem;
+}
+
+.quest-complete-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.quest-complete-actions button {
+  padding: 0.52rem 0.8rem;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  background: #1f2937;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #lesson-preview {
+    min-height: 240px;
+  }
+}

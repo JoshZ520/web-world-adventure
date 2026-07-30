@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App | CSS Dungeon</title>
+  <link rel="stylesheet" href="/src/styles/global.css">
+  <script type="module" src="/src/scripts/main.js"></script>
+</head>
+<body>
+  <site-header></site-header>
+
+  <main data-router="hash" data-default-route="map" aria-label="Application">
+    <section class="content-panel route-view" data-route="map" aria-labelledby="map-title">
+      <h1 id="map-title">Quest Map</h1>
+      <p>This routed view is your in-app world map and mission board.</p>
+      <p>Navigate directly to <a href="#profile">Profile</a> without loading a new page.</p>
+    </section>
+
+    <section class="content-panel route-view" data-route="profile" aria-labelledby="profile-title" hidden>
+      <h1 id="profile-title">Profile</h1>
+      <p>This routed view is where player stats, badges, and preferences can live.</p>
+      <p>Go back to <a href="#map">Quest Map</a> to continue your journey.</p>
+    </section>
+  </main>
+
+  <section class="land-grid" aria-label="The three lands">
+    <article class="land-card land-card--html">
+      <p class="land-label">Land 1</p>
+      <h2>Markup Keep</h2>
+      <p>Learn the building blocks of the web with tags, structure, and content.</p>
+    </article>
+
+    <article class="land-card land-card--css">
+      <p class="land-label">Land 2</p>
+      <h2>Cascading Kingdom</h2>
+      <p>Style the world with colors, spacing, borders, and layouts.</p>
+    </article>
+
+    <article class="land-card land-card--js">
+      <p class="land-label">Land 3</p>
+      <h2>Arcane Dominion</h2>
+      <p>Add behavior and interactivity with logic and events.</p>
+    </article>
+  </section>
+
+  <site-footer></site-footer>
+</body>
+</html>

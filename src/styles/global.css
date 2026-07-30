@@ -1,0 +1,177 @@
+/* Shared page layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.site-header,
+main {
+  width: min(1200px, 96vw);
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+
+
+.site-footer {
+  width: min(1200px, 96vw);
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: #444;
+}
+
+/* Shared top navigation */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Reusable panel container */
+.content-panel {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* Shared responsive behavior */
+@media (max-width: 768px) {
+  .top-nav {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* About page section rhythm */
+article section + section {
+  margin-top: 1.25rem;
+}
+
+article section h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* App routed views */
+main[data-router="hash"][aria-label="Application"] .content-panel h1 {
+  margin-top: 0;
+}
+
+/* Auth page layout */
+.auth-shell {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 3rem;
+}
+
+.auth-card {
+  max-width: 480px;
+  width: 100%;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 700;
+}
+
+.auth-field input {
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #cfd5df;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.auth-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.auth-submit,
+.auth-toggle,
+.auth-sign-out {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.auth-submit {
+  background: #2b6cb0;
+  color: #fff;
+}
+
+.auth-toggle,
+.auth-sign-out {
+  background: #eef3f8;
+  color: #234;
+}
+
+.auth-message {
+  min-height: 1.5rem;
+  margin-top: 0.85rem;
+  color: #2d4a62;
+  font-weight: 600;
+}
+
+/* Land grid and card layout */
+.land-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 1.25rem 0 1.5rem;
+}
+
+.land-card {
+  padding: 1rem 1.25rem;
+  border: 1px solid #d9dce3;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.land-card h2 {
+  margin: 0 0 0.5rem;
+}
+
+.land-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #5a6780;
+}

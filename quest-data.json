@@ -1,0 +1,233 @@
+{
+  "version": 1,
+  "progression": {
+    "allowDifficultySelection": true,
+    "difficultyUnlockAfterQuestId": "quest-1",
+    "difficultyOptions": [
+      {
+        "id": "beginner",
+        "label": "Beginner",
+        "description": "More hints and slower pacing"
+      },
+      {
+        "id": "standard",
+        "label": "Standard",
+        "description": "Balanced challenge and support"
+      },
+      {
+        "id": "heroic",
+        "label": "Heroic",
+        "description": "Fewer hints and tougher checks"
+      }
+    ]
+  },
+  "quests": [
+    {
+      "id": "quest-1",
+      "title": "A Hero Appears",
+      "difficulty": "beginner",
+      "description": "Create a character information page and use CSS fundamentals to turn simple content into a polished adventurer card.",
+      "rewards": {
+        "xp": 100
+      },
+      "replayable": true,
+      "postQuestUnlocks": {
+        "difficultySelection": true,
+        "profileThemeCustomization": true,
+        "allowProfileThemeReapply": true
+      },
+      "sections": [
+        {
+          "id": "q1-html",
+          "type": "html",
+          "title": "Meet Your Adventurer",
+          "instructions": "Begin by completing the character card structure. Add a character name, class, short description, and three stats using the class names already provided. The page does not need to look impressive yet - this section gives the CSS something to style.",
+          "starterCode": "<main class=\"character-card\">\n  <h1></h1>\n\n  <p class=\"character-class\"></p>\n\n  <p class=\"character-bio\"></p>\n\n  <h2>Character Stats</h2>\n  <ul class=\"character-stats\">\n    <li>Strength: </li>\n    <li>Wisdom: </li>\n    <li>Dex (Dexterity): </li>\n  </ul>\n</main>",
+          "checkConfig": {
+            "requiredElements": [
+              "main",
+              "h1",
+              "h2",
+              "p",
+              "ul",
+              "li"
+            ],
+            "requiredClasses": [
+              "character-card",
+              "character-class",
+              "character-bio",
+              "character-stats"
+            ],
+            "requiredNonEmptySelectors": [
+              "h1",
+              ".character-class",
+              ".character-bio"
+            ],
+            "requiredStatValues": [
+              "Strength",
+              "Wisdom",
+              "Dex (Dexterity)"
+            ]
+          }
+        },
+        {
+          "id": "q1-css",
+          "type": "css",
+          "title": "Prepare for the Journey",
+          "instructions": "Style the page so the character information feels like a real adventurer card. Set a page background, give the card a readable width, add padding and a border, round its corners, and center its text. Then style the character class and remove the default bullets from the stat list.",
+          "starterCode": "body {\n  background-color: ;\n  font-family: ;\n}\n\n.character-card {\n  max-width: ;\n  padding: ;\n  background-color: ;\n  border: ;\n  border-radius: ;\n  margin: ;\n  text-align: ;\n}\n\n.character-card h1 {\n  color: ;\n}\n\n.character-class {\n  font-weight: ;\n}\n\n.character-bio {\n  line-height: ;\n}\n\n.character-stats {\n  list-style: ;\n  padding: ;\n}",
+          "checkConfig": {
+            "requiredSelectors": [
+              "body",
+              ".character-card",
+              ".character-card h1",
+              ".character-class",
+              ".character-bio",
+              ".character-stats"
+            ],
+            "requiredProperties": {
+              "body": [
+                "background-color",
+                "font-family"
+              ],
+              ".character-card": [
+                "max-width",
+                "padding",
+                "background-color",
+                "border",
+                "border-radius",
+                "margin",
+                "text-align"
+              ],
+              ".character-card h1": [
+                "color"
+              ],
+              ".character-class": [
+                "font-weight"
+              ],
+              ".character-bio": [
+                "line-height"
+              ],
+              ".character-stats": [
+                "list-style",
+                "padding"
+              ]
+            },
+            "propertyAlternatives": {
+              ".character-stats": {
+                "list-style": [
+                  "list-style-type"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "q1-challenge",
+          "type": "challenge",
+          "title": "Create Your Own Adventurer",
+          "instructions": "Make the character card your own. Change the character name, class, biography, and all three stat values. Then choose new colors for the page background, card, and heading. Your finished page should describe a unique character rather than the example adventurer.",
+          "starterCode": "<style>\n  body {\n    background-color: aliceblue;\n    font-family: Arial, sans-serif;\n  }\n\n  .character-card {\n    max-width: 420px;\n    padding: 24px;\n    background-color: white;\n    border: 2px solid slategray;\n    border-radius: 12px;\n    margin: 40px auto;\n    text-align: center;\n  }\n\n  .character-card h1 {\n    color: slategray;\n  }\n\n  .character-class {\n    font-weight: bold;\n  }\n\n  .character-bio {\n    line-height: 1.5;\n  }\n\n  .character-stats {\n    list-style: none;\n    padding: 0;\n  }\n</style>\n\n<main class=\"character-card\">\n  <h1>Rowan Stormblade</h1>\n  <p class=\"character-class\">Ranger</p>\n  <p class=\"character-bio\">\n    A careful explorer who maps forgotten trails and helps travelers find their way home.\n  </p>\n\n  <h2>Character Stats</h2>\n  <ul class=\"character-stats\">\n    <li>Strength: 6</li>\n    <li>Wisdom: 8</li>\n    <li>Dex (Dexterity): 9</li>\n  </ul>\n</main>",
+          "checkConfig": {
+            "usesJavaScript": false,
+            "mustChangeText": [
+              "Rowan Stormblade",
+              "Ranger",
+              "A careful explorer who maps forgotten trails and helps travelers find their way home."
+            ],
+            "minimumChangedStatValues": 3,
+            "mustChangeCssProperties": [
+              "body.background-color",
+              ".character-card.background-color",
+              ".character-card h1.color"
+            ]
+          },
+          "themeOutput": {
+            "saveAs": "profile-theme",
+            "extract": {
+              "pageBackground": "body.background-color",
+              "cardBackground": ".character-card.background-color",
+              "headingColor": ".character-card h1.color",
+              "accentBorder": ".character-card.border"
+            },
+            "allowReapply": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "quest-2",
+      "title": "Quest 2",
+      "difficulty": "intermediate",
+      "description": "",
+      "rewards": {
+        "xp": 150
+      },
+      "sections": [
+        {
+          "id": "q2-html",
+          "type": "html",
+          "title": "",
+          "instructions": "",
+          "starterCode": "",
+          "checkConfig": {}
+        },
+        {
+          "id": "q2-css",
+          "type": "css",
+          "title": "",
+          "instructions": "",
+          "starterCode": "",
+          "checkConfig": {}
+        },
+        {
+          "id": "q2-js",
+          "type": "javascript",
+          "title": "",
+          "instructions": "",
+          "starterCode": "",
+          "checkConfig": {
+            "usesJavaScript": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "quest-3",
+      "title": "Quest 3",
+      "difficulty": "advanced",
+      "description": "",
+      "rewards": {
+        "xp": 200
+      },
+      "sections": [
+        {
+          "id": "q3-html",
+          "type": "html",
+          "title": "",
+          "instructions": "",
+          "starterCode": "",
+          "checkConfig": {}
+        },
+        {
+          "id": "q3-css",
+          "type": "css",
+          "title": "",
+          "instructions": "",
+          "starterCode": "",
+          "checkConfig": {}
+        },
+        {
+          "id": "q3-js",
+          "type": "javascript",
+          "title": "",
+          "instructions": "",
+          "starterCode": "",
+          "checkConfig": {
+            "usesJavaScript": true
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+/* Home hero section */
+.hero {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  justify-items: center;
+  text-align: center;
+}
+
+.lesson-preview-frame {
+  width: 100%;
+  max-width: 1100px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: #fff;
+}
+
+.lesson-preview-frame iframe {
+  width: 100%;
+  min-height: 260px;
+  border: 0;
+}
+
+.home-demo {
+  width: 100%;
+  max-width: 1100px;
+  text-align: left;
+  border: 1px solid #d4d9e2;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+  padding: 1rem;
+}
+
+.home-demo h2 {
+  margin: 0 0 0.5rem;
+}
+
+.home-demo p {
+  margin-top: 0;
+}
+
+.home-demo-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.home-demo-editor textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.92rem;
+  padding: 0.7rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+.home-demo-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.55rem;
+}
+
+.home-demo-actions button {
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  background: #1f2937;
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+}
+
+.home-demo-feedback {
+  margin: 0.45rem 0 0;
+  min-height: 1.2rem;
+  font-weight: 600;
+}
+
+@media (min-width: 900px) {
+  .lesson-preview-frame iframe {
+    min-height: 420px;
+  }
+}
+
+/* Home call-to-action section */
+.call-to-adventure {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.adventure-cta {
+  display: inline-block;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Demo Reference</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <main>
+    <h1>Home Demo Reference</h1>
+        <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Your coding adventure starts here</h1>
+      <p>Learn through bite-sized lessons, hands-on challenges, and rewarding quests designed to meet you wherever you are in your coding journey.</p>
+
+      <section class="home-demo" aria-label="Interactive character card demo">
+        <h2>Try the Character Card</h2>
+        <p>Edit the sample code, run preview, and see what your changes do instantly.</p>
+
+        <div class="home-demo-grid">
+          <div class="lesson-preview-frame" role="region" aria-label="Sample lesson preview">
+            <iframe id="home-demo-preview" title="Sample lesson preview"></iframe>
+          </div>
+
+          <div class="home-demo-editor">
+            <label for="home-demo-input">Example code</label>
+            <textarea id="home-demo-input" rows="16" spellcheck="false"></textarea>
+            <div class="home-demo-actions" aria-label="Home demo controls">
+              <button id="home-demo-run" type="button">Run preview</button>
+              <button id="home-demo-reset" type="button">Reset example</button>
+            </div>
+            <p id="home-demo-feedback" class="home-demo-feedback" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="home.js"></script>
+</body>
+</html>

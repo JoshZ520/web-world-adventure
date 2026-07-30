@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quest 1 | CSS Dungeon</title>
+  <link rel="stylesheet" href="/src/styles/global.css">
+  <link rel="stylesheet" href="/src/styles/quest.css">
+  <script type="module" src="/src/scripts/main.js"></script>
+</head>
+<body>
+  <site-header></site-header>
+
+  <main class="quest-page" aria-label="Quest lesson page">
+    <section class="content-panel lesson-meta" aria-labelledby="quest-title">
+      <p class="quest-kicker">First playable quest</p>
+      <h1 id="quest-title">Quest 1: A Hero Appears</h1>
+      <p id="section-title" class="section-title">Section: Loading...</p>
+      <p id="lesson-instructions" class="lesson-instructions">
+        Lesson instructions will render here after we wire the quest data.
+      </p>
+    </section>
+
+    <section class="content-panel lesson-workbench" aria-label="Lesson workbench">
+      <div class="lesson-tabs" role="tablist" aria-label="Lesson views">
+        <button id="tab-code" class="lesson-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-code" data-tab-target="code">Code</button>
+        <button id="tab-preview" class="lesson-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-preview" data-tab-target="preview">Preview</button>
+      </div>
+
+      <section id="panel-code" class="lesson-panel" role="tabpanel" aria-labelledby="tab-code" data-tab-panel="code">
+        <div class="editor-block">
+          <h2>Your code</h2>
+          <label for="code-input">Type your solution below</label>
+          <textarea id="code-input" rows="14" spellcheck="false" placeholder="Your code will go here..."></textarea>
+          <div id="css-assist" class="css-assist" hidden>
+            <p id="css-assist-label" class="css-assist-label">CSS suggestions</p>
+            <div id="css-assist-list" class="css-assist-list" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="panel-preview" class="lesson-panel" role="tabpanel" aria-labelledby="tab-preview" data-tab-panel="preview" hidden>
+        <div class="preview-block">
+          <h2>Visual preview</h2>
+          <div class="lesson-preview-frame" role="region" aria-label="Live lesson preview">
+            <iframe id="lesson-preview" title="Live lesson preview"></iframe>
+          </div>
+          <div id="quest-complete-panel" class="quest-complete-panel" hidden>
+            <h3>Quest Complete</h3>
+            <p>You can keep refining your final card, or save it to your profile once account features are available.</p>
+            <div class="quest-complete-actions" aria-label="Quest completion actions">
+              <button id="edit-final-result" type="button">Edit Final Result</button>
+              <button id="save-to-profile" type="button">Save to Profile</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="lesson-actions" aria-label="Lesson controls">
+        <button id="run-preview" type="button">Run preview</button>
+        <button id="check-solution" type="button">Check solution</button>
+        <button id="next-section" type="button" disabled>Next section</button>
+        <button id="reset-quest" type="button">Reset quest</button>
+      </div>
+
+      <p id="lesson-feedback" class="lesson-feedback" aria-live="polite">
+        Feedback will appear here.
+      </p>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+</body>
+</html>

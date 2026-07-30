@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | CSS Dungeon</title>
+  <link rel="stylesheet" href="/src/styles/global.css">
+  <script type="module" src="/src/scripts/main.js"></script>
+  <script src="/src/scripts/auth.js"></script>
+</head>
+<body>
+  <site-header></site-header>
+
+  <main>
+    <section class="auth-shell" aria-labelledby="auth-title">
+      <div class="auth-card content-panel">
+        <h1 id="auth-title">Enter the dungeon</h1>
+        <p id="auth-subtitle">Sign in to continue your adventure or create a new account.</p>
+
+        <form id="auth-form" class="auth-form">
+          <label class="auth-field" for="auth-email">
+            Email
+            <input id="auth-email" name="email" type="email" autocomplete="email" required>
+          </label>
+
+          <label class="auth-field" for="auth-password">
+            Password
+            <input id="auth-password" name="password" type="password" autocomplete="current-password" required>
+          </label>
+
+          <div class="auth-actions">
+            <button type="submit" class="auth-submit">Sign in</button>
+            <button type="button" class="auth-toggle" data-auth-toggle>Need an account?</button>
+            <button type="button" class="auth-sign-out" id="sign-out-button" hidden>Sign out</button>
+          </div>
+        </form>
+
+        <p id="auth-message" class="auth-message" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+</body>
+</html>
